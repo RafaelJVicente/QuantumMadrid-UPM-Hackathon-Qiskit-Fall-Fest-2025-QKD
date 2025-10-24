@@ -1,0 +1,45 @@
+[build-system]
+requires = [
+    "setuptools>=71.0,<81.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "QuantumMadrid-UPM-Hackathon-Qiskit-Fall-Fest-2025-QKD"
+version = "1.0.0"
+description = "REST API that uses ETSI GS QKD 014 standard to extract keys from a QKD or simulated QRNG source"
+authors = [
+    { name = "Rafael J. Vicente", email = "rafaelj.vicente@upm.es" },
+    { name = "Alberto Sebastian", email = "aj.sebastian@upm.es" },
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "annotated-types~=0.7.0",
+    "fastapi~=0.120.0",
+    "pydantic~=2.12.3",
+    "requests~=2.32.5",
+    "uvicorn[standard]~=0.38.0",
+]
+
+[project.scripts]
+start-etsi-gs-qkd-014-service = "quantummadrid_upm_hackathon_qiskit_fall_fest_2025_qkd.main:main"
+
+[project.optional-dependencies]
+dev = [
+    "bandit~=1.8.6",
+    "pip_audit~=2.9.0",
+    "ruff~=0.14.2",
+]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "I"]
+ignore = ["E501"]  # ignore line-length errors
+
+[tool.bandit]
+exclude = ["tests"]
+skips = ["B101"]  # skip assert checks
