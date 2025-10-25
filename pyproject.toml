@@ -53,3 +53,4 @@ skips = ["B104", "B311"]
 python_version = "3.9"
 mypy_path = ["src"]
 strict = true
+ignore_missing_imports = true
