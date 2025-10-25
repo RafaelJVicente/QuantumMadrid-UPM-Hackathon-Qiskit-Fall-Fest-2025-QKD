@@ -22,8 +22,15 @@ dependencies = [
     "uvicorn[standard]~=0.38.0",
 ]
 
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"quantummadrid_upm_hackathon_qiskit_fall_fest_2025_qkd.tls" = ["*"]
+
 [project.scripts]
 start-etsi-gs-qkd-014-service = "quantummadrid_upm_hackathon_qiskit_fall_fest_2025_qkd.main:main"
+start-etsi-gs-qkd-014-tls-service = "quantummadrid_upm_hackathon_qiskit_fall_fest_2025_qkd.main:tls_main"
 
 [project.optional-dependencies]
 dev = [
