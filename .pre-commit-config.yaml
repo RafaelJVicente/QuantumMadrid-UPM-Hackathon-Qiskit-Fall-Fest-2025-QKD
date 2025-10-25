@@ -48,3 +48,12 @@ repos:
         types: [python]
         pass_filenames: false
         always_run: true
+
+      # Coverage - testing report
+      - id: run-tests
+        name: Run Python tests with coverage
+        entry: bash -c "coverage run -m unittest discover -s tests -p '*.py' && coverage report -m"
+        language: system
+        types: [ python ]
+        pass_filenames: false
+        always_run: true
