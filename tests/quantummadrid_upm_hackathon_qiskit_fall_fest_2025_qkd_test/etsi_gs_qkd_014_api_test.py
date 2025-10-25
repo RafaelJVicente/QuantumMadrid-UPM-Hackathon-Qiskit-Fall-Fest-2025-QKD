@@ -7,7 +7,7 @@ from uuid import uuid4
 from fastapi import status
 from fastapi.testclient import TestClient
 
-from src.quantummadrid_upm_hackathon_qiskit_fall_fest_2025_qkd.etsi_gs_qkd_014_api import (
+from quantummadrid_upm_hackathon_qiskit_fall_fest_2025_qkd.etsi_gs_qkd_014_api import (
     DEFAULT_QRNG_SAE,
     DEFAULT_QRNG_UUID,
     EtsiGsQkd014ResponseDTO,

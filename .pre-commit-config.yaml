@@ -1,0 +1,50 @@
+repos:
+  - repo: local
+    hooks:
+      # Ruff - linting and formatting
+      - id: ruff
+        name: ruff
+        entry: ruff check src tests
+        language: system
+        types: [ python ]
+
+      # Bandit - security scan
+      - id: bandit
+        name: bandit
+        entry: bandit -c pyproject.toml -r src
+        language: system
+        types: [ python ]
+
+      # Mypy - type checking
+      - id: mypy
+        name: mypy
+        entry: mypy src tests
+        language: system
+        types: [ python ]
+        pass_filenames: false
+        always_run: true
+
+        # pip-audit - dependency vulnerabilities
+      - id: pip-audit
+        name: pip-audit
+        entry: pip-audit --progress off --ignore-vuln GHSA-4xh5-x5gv-qwph
+        language: system
+        types: [ python ]
+        pass_filenames: false
+        always_run: true
+
+      # Radon - cyclomatic complexity & maintainability
+      - id: radon
+        name: radon cc + mi
+        entry: bash -c "radon cc src -nc && radon mi src -nc"
+        language: system
+        types: [ python ]
+
+      # Vulture - dead code detection
+      - id: vulture
+        name: vulture dead code
+        entry: vulture src --min-confidence 66 --ignore-names cls,request
+        language: system
+        types: [python]
+        pass_filenames: false
+        always_run: true

@@ -28,8 +28,13 @@ start-etsi-gs-qkd-014-service = "quantummadrid_upm_hackathon_qiskit_fall_fest_20
 [project.optional-dependencies]
 dev = [
     "bandit~=1.8.6",
+    "coverage~=7.10.7",
+    "mypy~=1.18.2",
     "pip_audit~=2.9.0",
+    "pre_commit~=4.3.0",
+    "radon~=6.0.1",
     "ruff~=0.14.2",
+    "vulture~=2.14",
 ]
 
 [tool.ruff]
@@ -42,4 +47,9 @@ ignore = ["E501"]  # ignore line-length errors
 
 [tool.bandit]
 exclude = ["tests"]
-skips = ["B101"]  # skip assert checks
+skips = ["B104", "B311"]
+
+[tool.mypy]
+python_version = "3.9"
+mypy_path = ["src"]
+strict = true
