@@ -1,3 +1,5 @@
+# Author: Rafael J. Vicente <rafaelj.vicente@upm.es>
+# Copyright (c) 2025 The QuantumMadrid-UPM-Hackathon-Qiskit-Fall-Fest-2025-QKD project authors. All rights reserved.
 repos:
   - repo: local
     hooks:

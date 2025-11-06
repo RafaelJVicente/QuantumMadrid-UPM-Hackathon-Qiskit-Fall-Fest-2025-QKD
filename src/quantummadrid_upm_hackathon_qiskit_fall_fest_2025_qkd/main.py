@@ -1,6 +1,6 @@
-"""
-Author: Rafael J. Vicente <rafaelj.vicente@upm.es>
-"""
+__copyright__ = 'Copyright (c) 2025 The QuantumMadrid-UPM-Hackathon-Qiskit-Fall-Fest-2025-QKD project authors. All rights reserved.'
+__author__ = 'Rafael J. Vicente <rafaelj.vicente@upm.es>'
+
 import argparse
 from importlib.resources import files
 from typing import Annotated, Optional
@@ -43,7 +43,7 @@ def main(default_cer: Optional[str] = None, default_key: Optional[str] = None) -
 
     config = Config(host=args.host, port=args.port, cert=args.cert, key=args.key, ca_cert=args.cacert)
 
-    uvicorn.run('quantummadrid_upm_hackathon_qiskit_fall_fest_2025_qkd.etsi_gs_qkd_014_api:app',
+    uvicorn.run('quantummadrid_upm_hackathon_qiskit_fall_fest_2025_qkd.api:app',
                 host=config.host, port=config.port, reload=False,
                 ssl_certfile=cert, ssl_keyfile=key, ssl_ca_certs=config.ca_cert)
 
