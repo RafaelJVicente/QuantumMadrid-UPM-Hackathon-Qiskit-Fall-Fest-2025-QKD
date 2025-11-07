@@ -7,6 +7,9 @@ on:
     tags:
       - 'v*.*.*'
 
+permissions:
+  contents: write
+
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
@@ -26,13 +29,15 @@ jobs:
           TAG_VERSION=${GITHUB_REF_NAME#v}
           echo "Tag version: $TAG_VERSION"
 
+          python -m pip install --quiet tomli
+
           # Try to read from pyproject.toml or setup.py
           if [ -f pyproject.toml ]; then
-            PROJECT_VERSION=$(python -c "import tomllib; print(tomllib.load(open('pyproject.toml','rb'))['project']['version'])")
+            PROJECT_VERSION=$(python -c "import tomli; print(tomli.load(open('pyproject.toml','rb'))['project']['version'])")
           elif [ -f setup.py ]; then
             PROJECT_VERSION=$(python setup.py --version)
           else
-            echo "No pyproject.toml or setup.py found!"
+            echo 'No pyproject.toml or setup.py found!'
             exit 1
           fi
 
