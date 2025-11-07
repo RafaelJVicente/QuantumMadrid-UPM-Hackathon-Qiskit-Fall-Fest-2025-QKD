@@ -5,8 +5,7 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-Framework-green)](https://fastapi.tiangolo.com/)
 [![Last Commit](https://img.shields.io/github/last-commit/RafaelJVicente/QuantumMadrid-UPM-Hackathon-Qiskit-Fall-Fest-2025-QKD)](https://github.com/RafaelJVicente/QuantumMadrid-UPM-Hackathon-Qiskit-Fall-Fest-2025-QKD/commits/main)
 [![Release](https://img.shields.io/github/v/release/RafaelJVicente/QuantumMadrid-UPM-Hackathon-Qiskit-Fall-Fest-2025-QKD)](https://github.com/RafaelJVicente/QuantumMadrid-UPM-Hackathon-Qiskit-Fall-Fest-2025-QKD/releases)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/RafaelJVicente/QuantumMadrid-UPM-Hackathon-Qiskit-Fall-Fest-2025-QKD/release.yml?branch=main)](https://github.com/RafaelJVicente/QuantumMadrid-UPM-Hackathon-Qiskit-Fall-Fest-2025-QKD/actions)
-[![Code quality and security check](https://img.shields.io/github/actions/workflow/status/RafaelJVicente/QuantumMadrid-UPM-Hackathon-Qiskit-Fall-Fest-2025-QKD/code_quality.yml?branch=main&label=code+quality+and+security+check)](https://github.com/RafaelJVicente/QuantumMadrid-UPM-Hackathon-Qiskit-Fall-Fest-2025-QKD/actions)
+[![Code quality and security checks](https://img.shields.io/github/actions/workflow/status/RafaelJVicente/QuantumMadrid-UPM-Hackathon-Qiskit-Fall-Fest-2025-QKD/code_quality.yml?branch=main&label=code+quality+and+security+checks)](https://github.com/RafaelJVicente/QuantumMadrid-UPM-Hackathon-Qiskit-Fall-Fest-2025-QKD/actions)
 ---
 
 ## 🌐 Idioma / Language
